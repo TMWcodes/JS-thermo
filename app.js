@@ -4,3 +4,4 @@ const sayHello = (name) => {
 }
 
 console.log(sayHello('Ty'));
+console.log('rename')

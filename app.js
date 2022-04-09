@@ -16,10 +16,11 @@ console.log(makers)
 console.log(employment)
 console.log(employment + ' by ' + makers)
 
+//function without parameters
 const glassySky = () => {
 return 'above'
 }
-
+//function with parameters
 const shatters = (overMe) => {
     return overMe + ' and today'
 }
@@ -36,3 +37,6 @@ const add = (a, b) => {
   }
   
   console.log(multiply(2, add(4, 4)));
+
+// return - returns execution to the caller with optional result
+// console.log() - logs out information in console.

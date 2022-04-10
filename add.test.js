@@ -8,6 +8,6 @@ describe('plus', () => {
     })
 })
 
-//file name
+//function name file name
 
 const plus = require('./add');

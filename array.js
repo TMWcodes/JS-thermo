@@ -6,7 +6,7 @@ const addItem = (item) => {
   batch.push(item)
   return batch
 }
-
+console.log(addItem(3))
 //concat
 const addToBatch = (array, number) => {
     if (array.length >= 5) {
@@ -29,15 +29,11 @@ const checkLength = (phoneNumber) => {
     return phoneNumber.length <= 10;
 }
 
-// console.log(checkLength(phoneNumbers))
-// console.log(checkLength('123456789')) //empty argument/phoneNumber = reference error, 
-
-//
 const filterLongNumbers = (phoneNumbers) => {
     return phoneNumbers.filter(checkLength);
 }
 
-console.log(filterLongNumbers(phoneNumbers))
+console.log(`filterLongNumbers = ${filterLongNumbers(phoneNumbers)}`)
 
 //for loop
 const shortNumbers= []
@@ -47,7 +43,22 @@ for (let i = 0; i < phoneNumbers.length; i++) { //.length is for dynamics array
   }
 }
 
-console.log(`shortNumber = ${shortNumbers}`)
+console.log(`shortNumberLoop = ${shortNumbers}`)
+
+// const names = ['Anna', 'Laura', 'Josh', 'Min', 'Karla']
+
+// const generateMessages = names.map(name => {
+//   return (`Hi ${name} 50% off our best candies for you today!`)
+// })
+
+// console.log(`names array version = ${generateMessages}`)
+
+const generateMessagesFun = (names) => {
+  return names.map(name => {return `Hi ${name}! 50% off our best candies for you today!`;});
+}
+
+console.log(generateMessagesFun(['Tyrone']))
 
 module.exports = addToBatch;
 module.exports = addItem;
+module.exports = generateMessagesFun;

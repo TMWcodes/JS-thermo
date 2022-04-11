@@ -4,7 +4,7 @@ let batch = [1]
 //pushing
 const addItem = (item) => {
   batch.push(item)
-  return batch
+  return batch;
 }
 console.log(addItem(3))
 //concat
@@ -35,7 +35,7 @@ const filterLongNumbers = (phoneNumbers) => {
 
 console.log(`filterLongNumbers = ${filterLongNumbers(phoneNumbers)}`)
 
-//for loop
+// for loop
 const shortNumbers= []
 for (let i = 0; i < phoneNumbers.length; i++) { //.length is for dynamics array
   if (phoneNumbers[i].length <= 10) {
@@ -45,20 +45,25 @@ for (let i = 0; i < phoneNumbers.length; i++) { //.length is for dynamics array
 
 console.log(`shortNumberLoop = ${shortNumbers}`)
 
-// const names = ['Anna', 'Laura', 'Josh', 'Min', 'Karla']
+//array of messages
 
-// const generateMessages = names.map(name => {
-//   return (`Hi ${name} 50% off our best candies for you today!`)
-// })
+const names = ['Anna', 'Laura', 'Josh', 'Min', 'Karla']
 
-// console.log(`names array version = ${generateMessages}`)
+const generateMessages = names.map(name => {
+  return (`Hi ${name} 50% off our best candies for you today!`)
+})
 
-const generateMessagesFun = (names) => {
-  return names.map(name => {return `Hi ${name}! 50% off our best candies for you today!`;});
-}
+console.log(`names array version = ${generateMessages}`)
 
-console.log(generateMessagesFun(['Tyrone']))
+// const generateMessagesFun = (names) => {
+//   return names.map(name => {return `Hi ${name}! 50% off our best candies for you today!`;});
+// }
+
+// const generateMessagesFun = (names) => {
+//   return `Hi ${names}! 50% off our best candies for you today!`;}
+
+// console.log(generateMessagesFun(['Tyrone']))
 
 module.exports = addToBatch;
 module.exports = addItem;
-module.exports = generateMessagesFun;
+// module.exports = generateMessagesFun;
